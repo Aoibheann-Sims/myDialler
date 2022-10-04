@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myDialler.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="15"
+            Padding="20"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Enter a phone number:"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="15"
+                
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="PhoneNumberText"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Input telephone Text"
+                FontSize="18"
+                Placeholder="Enter a number"
+               
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="TranslateBtn"
+                Text="Translate"
+                WidthRequest="150"
+                SemanticProperties.Hint="Translates number text to numbers"
+                Clicked="TranslateBtn_Clicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CallNumberBtn"
+                Text="Call..."
+                WidthRequest="150"
+                SemanticProperties.Hint="Calls translated number"
+                Clicked="CallNumberBtn_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
